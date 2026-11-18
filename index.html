@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - SwiftShift Movers</title>
+<meta name="description" content="SwiftShift Movers: homes and offices moved with care, with an instant quote, clear written prices and trained crews.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-mark.png" alt="SwiftShift Movers truck logo">
+      <span class="brand-name">SwiftShift <span>Movers</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="services.html">Services</a>
+        <a href="home-moving.html">Home Moving</a>
+        <a href="office-moving.html">Office Moving</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <a class="nav-cta" href="index.html#quote">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1>Moving day, handled.</h1>
+        <p>Homes and offices moved with care, at a price you can see before you book. Get an instant estimate, lock your date with a small deposit, and let the crew do the heavy lifting.</p>
+        <div class="hero-btns">
+          <a class="btn btn-sky" href="pricing.html">See the Price Guide</a>
+          <a class="btn btn-outline" href="#how-it-works">How Moving Works</a>
+        </div>
+        <ul class="hero-points">
+          <li>Clear prices in writing before moving day</li>
+          <li>Trained, uniformed and checked crews</li>
+          <li>Balance paid only after the last box is in</li>
+        </ul>
+      </div>
+
+      <div class="quote-card" id="quote">
+        <h2>Instant quote</h2>
+        <p class="q-sub">Pick your move, tick what you need, and see the estimate live. No calls, no waiting.</p>
+        <form id="quote-form" novalidate>
+          <div class="form-body">
+            <div class="field">
+              <label for="q-type">Move type</label>
+              <select id="q-type">
+                <option value="home">Home move</option>
+                <option value="office">Office move</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="q-size">Home or office size</label>
+              <select id="q-size"></select>
+            </div>
+            <div class="field">
+              <label for="q-band">Distance</label>
+              <select id="q-band">
+                <option value="city">Within the city - included</option>
+                <option value="nearby">Nearby city, up to about 100 km - add Rs 15,000</option>
+                <option value="intercity">Intercity, longer distance - add Rs 40,000</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Add ons</label>
+              <div class="addon-list">
+                <label class="addon-item"><input type="checkbox" class="q-addon" value="packing" id="q-addon-packing"> Full packing service <span class="addon-price" id="q-packing-price">+ Rs 8,000</span></label>
+                <label class="addon-item"><input type="checkbox" class="q-addon" value="dismantling"> Furniture dismantling and reassembly <span class="addon-price">+ Rs 3,500</span></label>
+                <label class="addon-item"><input type="checkbox" class="q-addon" value="appliances"> Appliance handling <span class="addon-price">+ Rs 2,500</span></label>
+                <label class="addon-item"><input type="checkbox" class="q-addon" value="priority"> Priority weekend or evening slot <span class="addon-price">+ Rs 3,000</span></label>
+              </div>
+            </div>
+            <div class="estimate-box">
+              <div class="est-label">Your instant estimate</div>
+              <div class="est-value" id="q-estimate">Estimated from Rs 28,000</div>
+            </div>
+            <p class="smallprint">The final price is confirmed after a free survey or a short call, and never goes up on moving day unless you add work. Office moves: the full packing add on is charged at the large home rate of Rs 14,000. Storage is booked separately at Rs 6,000 per week and is not part of this estimate.</p>
+            <div class="field">
+              <label for="q-name">Your name</label>
+              <input type="text" id="q-name" placeholder="e.g. Ahmed Khan" autocomplete="name">
+              <p class="field-error" id="q-name-error">Please enter your name.</p>
+            </div>
+            <div class="field">
+              <label for="q-phone">Phone number</label>
+              <input type="tel" id="q-phone" placeholder="e.g. 0300 1234567" autocomplete="tel">
+              <p class="field-error" id="q-phone-error">Please enter a valid phone number.</p>
+            </div>
+            <button type="submit" class="btn btn-sky btn-block">Get My Confirmed Quote</button>
+          </div>
+          <div class="form-success" id="q-success" hidden>
+            <h3>Request received</h3>
+            <p id="q-success-text"></p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Everything a move needs, under one roof</h2>
+        <p>Packing, lifting, transport, furniture care and storage, all from one crew that answers to one booking. No chasing three different vendors on the busiest day of your year.</p>
+      </div>
+      <div class="tiles">
+        <div class="tile">
+          <h3>Home Moving</h3>
+          <p>Studios to large family houses, moved by a crew sized to your home, with furniture wrapped and floors protected.</p>
+          <div class="tile-meta"><span class="price">From <span data-ss-price="homeFrom"></span></span><a class="tile-link" href="home-moving.html">See home moving</a></div>
+        </div>
+        <div class="tile">
+          <h3>Office Moving</h3>
+          <p>Offices moved to a plan, with desks, chairs and IT crates handled per workstation. Weekend and night moves available.</p>
+          <div class="tile-meta"><span class="price">From <span data-ss-price="officeFrom"></span></span><a class="tile-link" href="office-moving.html">See office moving</a></div>
+        </div>
+        <div class="tile">
+          <h3>Packing Service</h3>
+          <p>We pack everything properly, with boxes, tape, bubble wrap and furniture blankets included in the price.</p>
+          <div class="tile-meta"><span class="price">From <span data-ss-price="packingSmall"></span></span><a class="tile-link" href="packing.html">See packing</a></div>
+        </div>
+        <div class="tile">
+          <h3>Furniture Dismantling</h3>
+          <p>Beds, wardrobes and tables taken apart with care and rebuilt at the new place, as part of your moving day.</p>
+          <div class="tile-meta"><span class="price">Rs 3,500 per booking</span><a class="tile-link" href="services.html">See services</a></div>
+        </div>
+        <div class="tile">
+          <h3>Appliance Handling</h3>
+          <p>Fridge, washing machine and AC indoor units disconnected, moved and placed where you want them.</p>
+          <div class="tile-meta"><span class="price">Rs 2,500 per booking</span><a class="tile-link" href="services.html">See services</a></div>
+        </div>
+        <div class="tile">
+          <h3>Storage</h3>
+          <p>Clean, locked short term storage for one standard room of goods, billed weekly while you settle in.</p>
+          <div class="tile-meta"><span class="price"><span data-ss-price="storage"></span> per week</span><a class="tile-link" href="packing.html#storage">See storage</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Four steps to moved in</h2>
+        <p>One, get your instant estimate with the form above. Two, we confirm the final price on a short call or a free survey, in writing. Three, lock the date with a <span data-ss-price="deposit"></span> deposit. Four, the crew arrives on time, packs and moves everything, and you pay the balance only when the last box is in place.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><h3>Get your estimate</h3><p>Use the instant quote form. It takes a minute and the price is shown live as you choose.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Confirm in writing</h3><p>We confirm the final price on a short call or a free survey, in writing, before you commit.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Lock your date</h3><p>A <span data-ss-price="deposit"></span> deposit locks your date and crew, and comes off your final bill.</p></div>
+        <div class="step"><span class="step-num">4</span><h3>Moving day</h3><p>The crew packs, moves and sets up. You pay the balance only when the last box is in place.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-navy" style="padding:44px 0">
+    <div class="wrap">
+      <h2>Honest from prices, no moving day surprises</h2>
+      <p style="max-width:720px">Home moves from <span data-ss-price="homeFrom"></span> within the city. The price we confirm before your move is the price you pay, unless you ask us to do extra work on the day. Every charge is listed on the Pricing page, because hidden fees are how movers get a bad name.</p>
+      <a class="btn btn-sky" href="pricing.html">See the full price guide</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <h2>Careful with boxes, careful with people</h2>
+        <p>Our crews are trained, uniformed and checked, and the crew leader walks the home with you before and after the move. Furniture is wrapped, floors are protected, and every box is labelled by room so unpacking is not a treasure hunt. If we damage something, we say so on the spot and the fix process starts the same day, not after a month of calls.</p>
+        <div class="cta-row">
+          <a class="btn" href="about.html">More about us</a>
+          <a class="btn btn-outline" href="checklist.html">Moving checklist</a>
+        </div>
+      </div>
+      <div class="photo-frame">
+        <img class="photo" src="images/family-packing.jpg" alt="A family packing boxes together in their new home while a SwiftShift truck waits outside" style="border-radius:6px">
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Questions, answered straight</h2>
+        <p>The things people ask us most before they book.</p>
+      </div>
+      <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How much notice do you need?</button>
+        <div class="faq-a"><p>Within the city, 3 to 4 days is usually enough, and weekends book out first. Intercity moves are best booked a week ahead. If you are in a rush, call us and we will tell you honestly what we can do.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How does the deposit work?</button>
+        <div class="faq-a"><p>A Rs 5,000 deposit locks your date and crew. It comes off your final bill, and you can change the date free of charge up to 48 hours before the move.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What if something gets damaged?</button>
+        <div class="faq-a"><p>Tell the crew leader on the day and it is noted on the job sheet there and then. We repair what can be repaired, and for anything beyond repair we agree a fair settlement with you. Nothing is hidden and nothing is argued about later from memory.</p></div>
+      </div>
+      </div>
+      <div class="cta-row"><a class="btn btn-outline" href="faq.html">See all questions</a></div>
+    </div>
+  </section>
+</main>
+
+<div class="lead-band">
+  <div class="wrap lead-in">
+    <p class="lead-text">This demo website was designed and built by Interlinkz. Like the look of it?</p>
+    <div class="lead-actions">
+      <a class="btn btn-sky" href="https://interlinkz.com/contact">Want a website like this? Talk to Interlinkz</a>
+      <a class="lead-link" href="https://interlinkz.com/contact">Contact Interlinkz</a>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/logo-mark.png" alt="SwiftShift Movers truck logo">
+          <span>SwiftShift <em>Movers</em></span>
+        </div>
+        <p>Homes and offices moved with care, at a price you can see before you book. Clear prices in writing, trained crews, and no moving day surprises.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="checklist.html">Moving Checklist</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="home-moving.html">Home Moving</a></li>
+          <li><a href="office-moving.html">Office Moving</a></li>
+          <li><a href="packing.html">Packing and Storage</a></li>
+          <li><a href="index.html#quote">Instant Quote</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li>SwiftShift Movers</li>
+          <li>17 Demo Industrial Road, Sample City</li>
+          <li>Phone: 0300 0000000</li>
+          <li>Email: hello@swiftshift.example.com</li>
+          <li>Monday to Saturday: 8 am to 8 pm</li>
+          <li>Sunday: 9 am to 2 pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built by <a href="https://interlinkz.com">Interlinkz</a></p>
+      <p>SwiftShift Movers is a demo portfolio website. All business details, prices and services shown are sample content for design display only.</p>
+    </div>
+  </div>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
